@@ -1,0 +1,116 @@
+/* Common Sidebar */
+.admin-sidebar-menu,
+.user-sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Admin spacing */
+.admin-sidebar-menu {
+    gap: 2.3rem;
+}
+
+/* Logo */
+.admin-sidebar-menu .sidebar-logo,
+.user-sidebar-menu .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #587e9b;
+}
+
+.admin-sidebar-menu .sidebar-logo h3,
+.user-sidebar-menu .sidebar-logo h3 {
+    color: #587e9b;
+}
+
+/* Logo Icon */
+.sidebar-logo-icons,
+.sidebar-logo-icon {
+    font-size: 1.4rem;
+}
+
+/* List */
+.sidebar-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Items */
+.sidebar-menu-list .sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #587e9b;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+/* Active */
+.sidebar-menu-list .sidebar-item.active {
+    background: #27374d;
+    color: #d25b24;
+}
+
+/* Sidebar Icon */
+.sidebar-icon {
+    display: none;
+}
+
+/* Overlay */
+.sidebar-overlay {
+    display: none;
+}
+
+/* Mobile / Tablet */
+@media (max-width: 840px) {
+    .sidebar-icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .admin-sidebar-menu .sidebar-logo,
+    .user-sidebar-menu.active .sidebar-logo {
+        display: none;
+    }
+
+    .admin-sidebar-menu,
+    .user-sidebar-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 260px;
+        height: 100vh;
+        padding-top: 70px;
+        background: #27374d;
+        z-index: 1000;
+        transform: translateX(-100%);
+        box-shadow: 8px 0 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .admin-sidebar-menu.active,
+    .user-sidebar-menu.active {
+        transform: translateX(0);
+        width: 50%;
+    }
+
+    .sidebar-overlay {
+        position: fixed;
+        inset: 0;
+        display: block;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 900;
+    }
+}

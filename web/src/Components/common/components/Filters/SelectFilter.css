@@ -1,0 +1,32 @@
+.select-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.select-filter .select-filter-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #526d82;
+}
+
+.select-filter .select-filter-control {
+    min-width: 220px;
+    height: 42px;
+    padding: 0 14px;
+
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+
+    background: #ffffff;
+    color: #10243d;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    outline: none;
+}
+
+.select-filter .select-filter-control:focus {
+    border-color: #0f3a5a;
+    box-shadow: 0 0 0 3px rgba(15, 58, 90, 0.1);
+}

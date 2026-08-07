@@ -1,0 +1,289 @@
+/* ================================
+   Common Cards Section Editor
+================================ */
+
+/* Card */
+.card-section-editor {
+    border-radius: 12px;
+    min-height: 500px;
+    color: var(--table-header-text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Header */
+.card-section-editor .table-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* Table Wrapper */
+.card-section-editor .cards-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
+
+}
+
+/* Optional scrollbar */
+.card-section-editor .cards-table-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.card-section-editor .cards-table-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+}
+
+.card-section-editor .cards-table-wrapper::-webkit-scrollbar-thumb {
+    background: #27374d;
+    border-radius: 999px;
+}
+
+/* Table */
+.card-section-editor .cards-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+}
+
+/* Table cells */
+.card-section-editor .cards-table th,
+.card-section-editor .cards-table td {
+    padding: 14px;
+    border: 1px solid var(--table-border-color);
+    text-align: left;
+    vertical-align: middle;
+    background: #fff;
+    color: #222;
+}
+
+/* Title */
+.card-section-editor .form-card .form-row {
+    display: unset;
+}
+
+.card-section-editor .form-card .form-row .form-control {
+    width: 100%;
+}
+
+/* Table header */
+.card-section-editor .cards-table th {
+    font-weight: 700;
+    background: var(--table-header-text-color);
+    ;
+    color: #111;
+}
+
+/* Small image preview inside table row */
+.card-section-editor .table-image-preview {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid var(--table-border-color);
+    padding: 4px;
+}
+
+
+
+/* Expanded editor row */
+.card-section-editor .editor-row td {
+    padding: 0;
+    background: var(--table-bg2-color);
+    border-top: none;
+    min-width: 0;
+}
+
+/* Main editor layout */
+.card-section-editor .inline-card-editor {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 24px;
+    padding: 20px;
+    background: var(--table-bg2-color);
+    min-width: 0;
+}
+
+/* Left side: editable fields */
+.card-section-editor .inline-card-editor-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-section-editor .inline-card-editor-fields .form-row {
+    margin-bottom: 0;
+}
+
+/* Right side: image preview and media button */
+.card-section-editor .inline-card-editor-side {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+/* Bigger preview inside expanded editor */
+.card-section-editor .inline-card-editor-side .image-preview {
+    width: 200px;
+    height: 160px;
+    margin-top: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--table-border-color);
+}
+
+.card-section-editor .inline-card-editor-side .image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Media selector button */
+.card-section-editor .inline-card-editor-side .select-media-btn {
+    min-width: 160px;
+}
+
+/* Submit Button */
+.card-section-editor .form-actions button {
+    margin-top: 10px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .card-section-editor .cards-table {
+        min-width: 680px;
+    }
+
+    .card-section-editor .cards-table th,
+    .card-section-editor .cards-table td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .card-section-editor .edit-card-btn {
+        width: 100%;
+    }
+
+    .card-section-editor .inline-card-editor {
+        grid-template-columns: 1fr;
+    }
+
+    .card-section-editor .inline-card-editor-side {
+        align-items: stretch;
+    }
+
+    .card-section-editor .inline-card-editor-side .image-preview {
+        width: 100%;
+        height: 160px;
+    }
+
+    .card-section-editor .inline-card-editor-side .select-media-btn {
+        width: 100%;
+    }
+}
+
+/* Mobile card layout */
+@media (max-width: 600px) {
+
+    .card-section-editor .cards-table-wrapper {
+        overflow-x: visible;
+    }
+
+    .card-section-editor .cards-table {
+        min-width: 0;
+    }
+
+
+    /* table-header */
+    .card-section-editor .cards-table thead {
+        display: none;
+    }
+
+    .card-section-editor .cards-table td {}
+
+    .card-section-editor .cards-table,
+    .card-section-editor .cards-table tbody,
+    .card-section-editor .cards-table tr {
+        display: block;
+    }
+
+    .card-section-editor .cards-table tbody tr {
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 10px
+    }
+
+    .card-section-editor .cards-table td {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 12px;
+    }
+
+    .card-section-editor .cards-table td:last-child {
+        border-bottom: none;
+    }
+
+    .card-section-editor .cards-table td:nth-child(1)::before {
+        content: "Card";
+    }
+
+    .card-section-editor .cards-table td:nth-child(2)::before {
+        content: "Title";
+    }
+
+    .card-section-editor .cards-table td:nth-child(3)::before {
+        content: "Text";
+    }
+
+    .card-section-editor .cards-table td:nth-child(4)::before {
+        content: "Image";
+    }
+
+    .card-section-editor .cards-table td:nth-child(5)::before {
+        content: "Action";
+    }
+
+    .card-section-editor .cards-table td::before {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #526d82;
+        text-transform: uppercase;
+    }
+
+    .card-section-editor .table-image-preview {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .card-section-editor {
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .card-section-editor .inline-card-editor {
+        padding: 14px;
+        gap: 16px;
+    }
+
+    .card-section-editor .cards-table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+}

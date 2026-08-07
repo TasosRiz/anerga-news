@@ -1,0 +1,100 @@
+.container-slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 100px auto 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.swiper-horizontal {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.swiper-slide{
+  display: flex;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.active-anim {
+  opacity: 1;
+}
+
+.content {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.btn-slide{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    border: 1px solid rgba(34, 34, 34, 0.287);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-slide img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.btn-slide.next {
+  right: 20px;
+}
+
+.btn-slide.prev {
+  left: 20px;
+}
+
+
+/* Dots */
+.container-dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active-anim {
+  background: #fff;
+}

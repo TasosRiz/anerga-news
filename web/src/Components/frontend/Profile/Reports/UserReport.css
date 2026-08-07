@@ -1,0 +1,17 @@
+/* User Header */
+.user-reports-container .user-reports-header {
+    display: flex;
+    padding: 16px;
+}
+
+.user-reports-container .reports-filter {
+    flex: 1;
+    padding: 16px;
+}
+
+.user-reports-container .user-reports-actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin: 18px 0;
+}

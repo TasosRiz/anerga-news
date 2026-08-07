@@ -1,0 +1,35 @@
+/* Styles ειδικά για τη σελίδα αιτημάτων του admin.
+
+  Το κοινό SidePanel και το layout του διαχειρίζονται
+  από τα αντίστοιχα κοινά components και CSS files. */
+
+.admin-reports-container {
+  width: 100%;
+  min-width: 0;
+}
+
+/* HEADER */
+.admin-reports-container .reports-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* toolbar-Filters */
+.admin-reports-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+
+  .admin-reports-container .reports-header,
+  .admin-reports-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

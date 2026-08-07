@@ -1,0 +1,38 @@
+.category-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.category-edit-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.category-edit-form input,
+.category-edit-form select {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 0 12px;
+    background: #ffffff;
+    color: #0f172a;
+    font-size: 0.88rem;
+    font-weight: 600;
+    outline: none;
+}
+
+.category-edit-form input:focus,
+.category-edit-form select:focus {
+    border-color: #526d82;
+    box-shadow: 0 0 0 3px rgba(82, 109, 130, 0.12);
+}
+
+.category-edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 12px;
+    border-top: 1px solid #eef2f7;
+}

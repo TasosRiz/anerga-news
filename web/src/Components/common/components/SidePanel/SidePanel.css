@@ -1,0 +1,102 @@
+/* Σε οποιο page χρειαζεται */
+/* <div
+    className={`with-side-panel ${selectedReport ? "has-panel" : ""}`}
+    style={{ "--side-panel-width": "360px" }}
+> </div>*/
+.with-side-panel {
+    position: relative;
+    display: block;
+}
+
+
+.with-side-panel>* {
+    min-width: 0;
+}
+
+/* SIDEPANEL */
+.side-panel {
+    position: fixed;
+
+    top: 90px;
+    right: 18px;
+
+    width: var(--side-panel-width, 360px);
+    height: calc(100vh - 110px);
+
+    overflow-y: auto;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    padding: 18px;
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.18);
+
+    z-index: 1000;
+}
+
+.side-panel-close {
+    position: sticky;
+    top: 0;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.side-panel-close:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.side-panel-header {
+    padding: 10px 0 16px;
+    border-bottom: 1px solid #eef2f7;
+    margin-bottom: 16px;
+}
+
+.side-panel-header h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 1.05rem;
+    font-weight: 900;
+}
+
+.side-panel-header p {
+    margin: 5px 0 0;
+    color: #64748b;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.side-panel-content {
+    width: 100%;
+}
+
+@media (max-width: 1100px) {
+    .with-side-panel.has-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .side-panel {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(420px, 92vw);
+        height: 100vh;
+        border-radius: 0;
+        z-index: 1000;
+    }
+}

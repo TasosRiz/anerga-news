@@ -1,0 +1,17 @@
+.categories-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+}
+
+.categories-page-tabs {
+    width: 100%;
+    min-width: 0;
+}
+
+.categories-page-content {
+    width: 100%;
+    min-width: 0;
+}

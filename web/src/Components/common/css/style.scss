@@ -1,0 +1,186 @@
+:root {}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: rgb(93, 35, 147) !important;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 100;
+    height: 80px;
+}
+
+
+footer {
+    background: rgb(93, 35, 147);
+
+    ul {
+        li {
+            list-style: none;
+
+            a {
+                color: red;
+                font-size: 1.2em;
+
+            }
+        }
+    }
+
+    .spotlight {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+}
+
+.section-1 {
+    .swiper {
+        .swiper-slide {
+            height: 650px;
+
+            .content {
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+
+    .swiper-wrapper {
+        display: flex;
+    }
+}
+
+.product {
+    .card-img {
+        overflow: hidden;
+        height: 250px;
+        width: 250px;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    &:hover {
+        img {
+            scale: 1.2
+        }
+    }
+
+    .card-body {
+        a {
+            font-size: 1.2em;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        .price {
+            font-size: 1.2em;
+        }
+
+        span {
+            color: rgba($color: black, $alpha: 1.0);
+        }
+    }
+}
+
+
+@media screen and (max-width: 778px) {
+    footer {
+        text-align: center;
+    }
+}
+
+// PRODUCTS
+
+.product-detail {
+    .mySwiper {
+        .swiper-slide {
+            height: auto !important;
+        }
+
+        .price {
+            font-weight: bold;
+
+            span {
+                color: rgba($color: black, $alpha: 1.0);
+            }
+        }
+    }
+
+
+}
+
+.swiper.mySwiper2 {
+    height: 300px;
+}
+
+.swiper.mySwiper2 img {
+    height: 100%;
+}
+
+.btn {
+    &.btn-size {
+        background-color: rgba($color: #000000, $alpha: 0.03);
+        border-color: rgb(#000000, 0.05);
+        padding: 7px 15px;
+
+        &.active {
+            border-color: #000000, 0.20;
+        }
+
+        &.hover {
+            border-color: rgba($color: #000000, $alpha: 0.20);
+            color: #000000;
+        }
+    }
+
+}
+
+.product-desc {
+    flex-direction: column;
+}
+
+// Desc-Reviews
+.nav-tabs .nav-link {
+    color: black;
+}
+
+// LOGIN PAGE
+.login {
+    width: 450px;
+}
+
+// DASHBOARD
+.sidebar ul li {
+    border-bottom: 1px solid rgba(6, 17, 35, 0.2);
+    margin-bottom: 2px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    color: #061123;
+}
+
+.sidebar ul li a:hover {
+    color: red;
+}
+
+
+// CATEGORIES
+.badge {
+    background: green;
+}

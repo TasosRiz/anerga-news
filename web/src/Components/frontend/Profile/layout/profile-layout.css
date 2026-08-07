@@ -1,0 +1,91 @@
+/* Layout */
+.user-dashboard-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+
+/* Content */
+.user-dashboard-layout .user-content {
+    background: #fff;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+/* Logo */
+.user-sidebar-menu .sidebar-logo {
+    text-align: center;
+    padding: 20px;
+    color: #0e980c;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+/* List */
+.user-sidebar-menu .menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Items */
+.user-sidebar-menu .menu-list .sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.user-sidebar-menu .menu-list .sidebar-item.active {
+    background: #27374d;
+    color: #f771c9 !important;
+}
+
+/* Icons */
+.sidebar-logo-icon,
+.sidebar-logo-icons {
+    font-size: 1.4rem;
+}
+
+/* Overlay default */
+.sidebar-overlay {
+    display: none;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .user-dashboard-layout {
+        gap: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .user-dashboard-layout .user-content {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+
+
+
+    .sidebar-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 1100;
+    }
+}

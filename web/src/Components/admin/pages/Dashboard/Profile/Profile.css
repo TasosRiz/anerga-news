@@ -1,0 +1,85 @@
+/* PROFILE */
+.profile {
+    flex: 1;
+}
+
+/* image */
+.profile .user-profile {
+    height: 45;
+    background: #dde6ed;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Detail */
+.profile .user-detail {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile .user-detail img {
+    background: #fff;
+    border-radius: 50%;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.profile .user-detail .username {
+    color: #526d82;
+}
+
+/* Courses */
+.profile .user-courses {
+    background: #fff;
+    flex: 1;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.profile .user-courses .course {
+    background: #dde6ed;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.course-detail .course-detail {
+    display: flex;
+    gap: 20x;
+    align-items: center;
+}
+
+.course-detail .course-detail .course-cover {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.course-detail .course-detail .duration {
+    font-size: 12px;
+}
+
+.course-detail .course-detail .action {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.course-detail .course-detail .profession {
+    color: #969393;
+}

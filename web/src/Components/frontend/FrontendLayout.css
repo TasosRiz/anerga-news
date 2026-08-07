@@ -1,0 +1,12 @@
+.user-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.user-main-content {
+    flex: 1;
+    min-height: 0;
+}

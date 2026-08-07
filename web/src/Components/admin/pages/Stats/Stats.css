@@ -1,0 +1,169 @@
+.stats-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+/* όλα τα βασικά blocks να μη σπρώχνουν έξω το layout */
+.stats-page-container *,
+.stats-section-top,
+.stats-section-middle,
+.stats-section-bottom,
+.stats-over-time,
+.stats-by-category,
+.stats-by-location,
+.stats-latest-reports {
+    min-width: 0;
+}
+
+/* TOP */
+.stats-page-container .stats-section-top {
+    width: 100%;
+}
+
+/* MIDDLE */
+.stats-page-container .stats-section-middle {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+}
+
+.stats-page-container .stats-section-middle .stats-over-time,
+.stats-page-container .stats-section-middle .stats-by-category {
+    width: 100%;
+    display: flex;
+    min-width: 0;
+}
+
+/* BOTTOM */
+.stats-page-container .stats-section-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+}
+
+/* By Location */
+.stats-page-container .stats-section-bottom .stats-by-location {
+    width: 100%;
+    display: flex;
+    min-width: 0;
+}
+
+/* Latest Reports */
+.stats-page-container .stats-section-bottom .stats-latest-reports {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* latest reports-header */
+.stats-page-container .stats-section-bottom .stats-latest-reports .latest-reports-header {
+    padding: 14px 16px 8px;
+}
+
+.stats-page-container .stats-section-bottom .stats-latest-reports .latest-reports-header h3 {
+    margin: 0 0 6px;
+    color: #0f172a;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.stats-page-container .stats-section-bottom .stats-latest-reports .latest-reports-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* latest */
+.stats-page-container .stats-section-bottom .stats-latest-reports .admin-reports-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    padding: 8px;
+    border-radius: 16px;
+}
+
+
+
+/* LARGE SCREENS */
+@media (min-width: 1400px) {
+    .stats-page-container {
+        gap: 28px;
+    }
+
+    .stats-page-container .stats-section-middle,
+    .stats-page-container .stats-section-bottom {
+        gap: 22px;
+    }
+}
+
+/* MEDIUM SCREENS */
+@media (max-width: 1200px) {
+
+    .stats-page-container .stats-section-middle,
+    .stats-page-container .stats-section-bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .stats-page-container {
+        gap: 18px;
+    }
+
+    .stats-page-container .stats-section-middle,
+    .stats-page-container .stats-section-bottom {
+        gap: 16px;
+    }
+
+    .stats-page-container .stats-section-bottom .stats-latest-reports .latest-reports-header {
+        padding: 12px;
+    }
+
+    .stats-page-container .stats-section-bottom .stats-latest-reports .admin-reports-table {
+        min-width: 680px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 520px) {
+    .stats-page-container {
+        gap: 14px;
+    }
+
+    .stats-page-container .stats-section-middle,
+    .stats-page-container .stats-section-bottom {
+        gap: 14px;
+    }
+
+    .stats-page-container .stats-section-bottom .stats-latest-reports {
+        border-radius: 12px;
+    }
+
+    .stats-page-container .stats-section-bottom .stats-latest-reports .latest-reports-header {
+        padding: 10px;
+    }
+
+    .stats-page-container .stats-section-bottom .stats-latest-reports .admin-reports-table-wrapper {
+        padding: 6px;
+    }
+
+    .stats-page-container .stats-section-bottom .stats-latest-reports .admin-reports-table {
+        min-width: 620px;
+    }
+}

@@ -1,0 +1,7 @@
+.about-page {
+    /* width: 100%; */
+    background: linear-gradient(180deg, #f8fafc 0%, #eef4f8 100%);
+    color: #0f172a;
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}

@@ -1,0 +1,443 @@
+/*
+|--------------------------------------------------------------------------
+| Reports Cards
+|--------------------------------------------------------------------------
+*/
+
+.reports-container {
+    padding: 16px;
+
+    border-radius: 18px;
+
+}
+
+.reports-container .reports-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Report Item
+|--------------------------------------------------------------------------
+*/
+
+.reports-container .reports-list .report-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    color: inherit;
+    text-decoration: none;
+
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.reports-container .reports-list .report-item:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+    background: var(--table-header-color);
+    box-shadow: 0 8px 26px rgba(15, 23, 42, 0.1);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Report Image
+|--------------------------------------------------------------------------
+|
+| Το ReportImage χρησιμοποιεί ShowImage.
+| Rendered classes:
+| .show-image
+| .show-image-card
+|
+|--------------------------------------------------------------------------
+*/
+
+.reports-container .reports-list .report-item .show-image-card {
+    width: 150px;
+    height: 150px;
+    flex: 0 0 150px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+    background: #eef2f6;
+}
+
+.reports-container .reports-list .report-item .show-image-card img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Image Placeholder
+|--------------------------------------------------------------------------
+*/
+
+.reports-container .reports-list .report-item .show-image-card .show-image-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+
+    background: #eef2f6;
+    color: #64748b;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Main Section
+|--------------------------------------------------------------------------
+*/
+
+.reports-container .report-main-section {
+    flex: 1 1 auto;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Title
+|--------------------------------------------------------------------------
+*/
+
+.reports-container .report-main-section .report-title {
+    max-width: 100%;
+    margin: 0 0 10px;
+
+    color: #25364d;
+
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Category
+|--------------------------------------------------------------------------
+*/
+
+.reports-container .report-main-section .report-category {
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 14px;
+    padding: 6px 13px;
+
+    display: inline-flex;
+    align-items: center;
+
+    border-radius: 999px;
+    background: #eef2f6;
+
+    color: #687789;
+
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Info List
+|--------------------------------------------------------------------------
+*/
+
+.reports-container .report-main-section .report-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    color: #334155;
+
+    font-size: 1rem;
+}
+
+.reports-container .report-main-section .report-date,
+.reports-container .report-main-section .report-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    min-width: 0;
+}
+
+.reports-container .report-main-section .report-location {
+    color: #64748b;
+}
+
+.reports-container .report-main-section .report-code {
+    margin-top: 12px;
+
+    display: inline-flex;
+
+    color: #94a3b8;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.reports-container .report-main-section .report-user {
+    margin: 10px 0 0;
+
+    color: #64748b;
+
+    font-size: 0.9rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Right Side
+|--------------------------------------------------------------------------
+*/
+
+.reports-container .report-side-section {
+    flex: 0 0 190px;
+    min-height: 130px;
+    padding-left: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    border-left: 1px solid #dbe3ea;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Status Colors
+|--------------------------------------------------------------------------
+*/
+
+.status-new {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-in-progress {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.status-resolved {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.status-unknown {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Responsive
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 1400px) {
+    .reports-container .reports-list .report-item {
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .reports-container .reports-list .report-item .show-image-card {
+        width: 120px;
+        height: 120px;
+        flex: 0 0 120px;
+    }
+
+    .reports-container .report-side-section {
+        flex: 0 0 140px;
+        min-height: 110px;
+        padding-left: 14px;
+        gap: 12px;
+    }
+
+    .reports-container .report-main-section .report-title {
+        margin-bottom: 8px;
+        font-size: 1.05rem;
+    }
+
+    .reports-container .report-main-section .report-category {
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .reports-container .report-main-section .report-info-list {
+        gap: 6px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .reports-container .reports-list .report-item {
+        gap: 20px;
+        padding: 18px 20px;
+    }
+
+    .reports-container .reports-list .report-item .show-image-card {
+        width: 140px;
+        height: 140px;
+        flex: 0 0 140px;
+    }
+
+    .reports-container .report-side-section {
+        flex: 0 0 170px;
+        min-height: 125px;
+        padding-left: 22px;
+        gap: 16px;
+    }
+
+    .reports-container .report-main-section .report-title {
+        font-size: 1.2rem;
+    }
+
+    .reports-container .report-main-section .report-category {
+        font-size: 0.88rem;
+    }
+
+    .reports-container .report-main-section .report-info-list {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .reports-container .reports-list .report-item {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .reports-container .reports-list .report-item .show-image-card {
+        width: 120px;
+        height: 120px;
+        flex: 0 0 120px;
+    }
+
+    .reports-container .report-main-section {
+        flex: 1 1 calc(100% - 140px);
+    }
+
+    .reports-container .report-side-section {
+        flex: 1 1 100%;
+        min-height: auto;
+        padding-left: 0;
+        padding-top: 14px;
+
+        flex-direction: row;
+        justify-content: space-between;
+
+        border-left: none;
+        border-top: 1px solid #e2e8f0;
+    }
+}
+
+@media (max-width: 560px) {
+    .reports-container {
+        padding: 10px;
+    }
+
+    .reports-container .reports-list {
+        gap: 14px;
+    }
+
+    .reports-container .reports-list .report-item {
+        gap: 14px;
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .reports-container .reports-list .report-item .show-image-card {
+        width: 92px;
+        height: 92px;
+        flex: 0 0 92px;
+
+        border-radius: 14px;
+    }
+
+    .reports-container .report-main-section {
+        flex: 1 1 calc(100% - 106px);
+    }
+
+    .reports-container .report-main-section .report-title {
+        margin-bottom: 8px;
+        font-size: 1.05rem;
+    }
+
+    .reports-container .report-main-section .report-category {
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        font-size: 0.78rem;
+    }
+
+    .reports-container .report-main-section .report-info-list {
+        gap: 6px;
+        font-size: 0.88rem;
+    }
+
+    .reports-container .report-side-section {
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 430px) {
+    .reports-container .reports-list .report-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .reports-container .reports-list .report-item .show-image-card {
+        width: 100%;
+        height: 160px;
+        flex: none;
+    }
+
+    .reports-container .report-main-section {
+        flex: none;
+    }
+
+    .reports-container .report-side-section {
+        flex: none;
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

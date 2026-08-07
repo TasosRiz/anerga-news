@@ -1,0 +1,132 @@
+.front-post-view-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 56px 6%;
+    background: #f8fafc;
+}
+
+/* container */
+.front-post-view-page .front-post-view-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* container-back button */
+.front-post-view-page .front-post-back-link {
+    display: inline-flex;
+    margin-bottom: 22px;
+    color: #526d82;
+    font-size: 0.9rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.front-post-view-page .front-post-back-link:hover {
+    color: #e86f2f;
+}
+
+/* card */
+.front-post-view-page .front-post-view-card {
+    padding: 34px;
+    border: 1px solid #e2e8f0;
+    border-radius: 26px;
+    background: #ffffff;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.07);
+}
+
+.front-post-view-page .front-post-view-card h1 {
+    margin: 0 0 22px;
+    color: #0f172a;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 950;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+/* card-meta */
+.front-post-view-page .front-post-view-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.front-post-view-page .front-post-view-category {
+    display: inline-flex;
+    width: fit-content;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #fff1e8;
+    color: #e86f2f;
+    font-size: 0.78rem;
+    font-weight: 900;
+}
+
+.front-post-view-page .front-post-view-date {
+    color: #94a3b8;
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+/* Image */
+.front-post-view-page .front-post-view-image {
+    width: 100%;
+    height: 320px;
+    margin-bottom: 24px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #eaf0f4;
+}
+
+.front-post-view-page .front-post-view-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* body */
+.front-post-view-page .front-post-view-body {
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.85;
+    white-space: pre-line;
+}
+
+/* Errors */
+.front-post-view-alert {
+    padding: 16px;
+    border-radius: 14px;
+    background: #eaf0f4;
+    color: #526d82;
+    font-weight: 800;
+    text-align: center;
+}
+
+.front-post-view-alert.error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+@media (max-width: 640px) {
+    .front-post-view-page {
+        padding: 34px 16px;
+    }
+
+    .front-post-view-page .front-post-view-card {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .front-post-view-page .front-post-view-meta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* image */
+    .front-post-view-page .front-post-view-image {
+        height: 220px;
+        border-radius: 18px;
+    }
+}

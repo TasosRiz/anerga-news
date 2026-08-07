@@ -1,0 +1,39 @@
+.admin-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* body */
+.admin-layout .admin-body {
+    display: flex;
+    flex: 1;
+}
+
+/* content */
+.admin-content {
+    background: #fff;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+/* Mobiles */
+@media (max-width: 800px) {
+
+    /* body */
+    .admin-layout .admin-body .admin-content {}
+
+}
+
+/* Mobiles */
+@media (max-width: 576px) {
+
+    /* body */
+    .admin-layout .admin-body {
+        display: unset;
+    }
+
+}

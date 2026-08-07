@@ -1,0 +1,93 @@
+.home-skeleton {
+    width: 100%;
+}
+
+.skeleton-section {
+    padding: 48px 24px;
+    background: #202020;
+}
+
+.skeleton-section.light {
+    background: #ffffff;
+}
+
+.skeleton-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skeleton-card {
+    padding: 20px;
+    border-radius: 18px;
+    background: #526d82;
+}
+
+.skeleton {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+}
+
+.skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.28),
+            transparent);
+    animation: skeleton-loading 1.3s infinite;
+}
+
+.skeleton-title {
+    width: 320px;
+    height: 34px;
+    margin: 0 auto 32px;
+}
+
+.skeleton-image {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 18px;
+}
+
+.skeleton-image.small {
+    width: 60px;
+    height: 60px;
+}
+
+.skeleton-line {
+    width: 100%;
+    height: 14px;
+    margin-bottom: 10px;
+}
+
+.skeleton-line.large {
+    width: 70%;
+    height: 20px;
+}
+
+.skeleton-line.short {
+    width: 55%;
+}
+
+@keyframes skeleton-loading {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .skeleton-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .skeleton-title {
+        width: 220px;
+    }
+}

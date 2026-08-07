@@ -1,0 +1,11 @@
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .notifications-header {
+        flex-direction: column;
+    }
+}

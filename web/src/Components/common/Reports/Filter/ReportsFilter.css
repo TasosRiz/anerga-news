@@ -1,0 +1,40 @@
+.reports-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reports-toolbar .reports-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0 0 5px 0
+}
+
+/* button */
+.reports-toolbar .reports-filter-btn {
+    color: var(--table-header-text-color);
+    background: var(--table-header-color);
+    border: 1-x solid #e5eaf0;
+}
+
+.reports-toolbar .reports-filter-btn.active {
+    color: white;
+    background-color: var(--table-bg2-color);
+    border-color: #519079;
+}
+
+@media (max-width: 576px) {
+    .reports-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .reports-filters {
+        width: 100%;
+    }
+
+    .reports-filter-btn {
+        flex: 1;
+    }
+}

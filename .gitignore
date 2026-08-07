@@ -1,0 +1,31 @@
+# General
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# Laravel
+laravel/.env
+laravel/vendor/
+laravel/node_modules/
+laravel/storage/logs/*.log
+laravel/bootstrap/cache/*.php
+
+# React
+react/.env
+react/.env.local
+react/node_modules/
+react/dist/
+react/build/
+
+# Flutter
+mobile/.env
+mobile/.dart_tool/
+mobile/build/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/ios/Pods/
+mobile/ios/.symlinks/

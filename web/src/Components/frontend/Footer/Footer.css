@@ -1,0 +1,117 @@
+.footer-section {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    background-color: var(--footer-bg);
+
+}
+
+
+.footer-section .footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Links */
+.footer-section .footer-container .footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.footer-section .footer-container .footer-links .footer-links-buttons {
+    width: 150px;
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
+    flex: 1;
+    border-right: 1px solid white;
+}
+
+.footer-section .footer-container .footer-links .footer-links-buttons a {
+    color: rgb(175, 175, 179);
+    flex-direction: row;
+}
+
+/* social */
+.footer-section .footer-container .footer-links .footer-links-buttons .socialmedia {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-section .footer-container .footer-links .footer-links-buttons .socialmedia img {
+    width: 80%;
+}
+
+/* contact */
+.footer-section .footer-container .footer-contacts .footer-links-buttons h4 {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 0.9rem;
+}
+
+.footer-section .footer-container .footer-links .footer-links-buttons p {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.footer-section .footer-container .footer-links .footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.footer-section .footer-container .footer-links .footer-contact-item a {
+    color: white
+}
+
+.footer-section .footer-container .footer-links .footer-contact-item svg {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* white line */
+hr {
+    color: white !important;
+    width: 100%;
+}
+
+
+/* Below */
+.footer-below {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+    justify-content: center;
+}
+
+
+.footer-below p {
+    font-size: 13px;
+    line-height: 15px;
+    color: white;
+    font-weight: 600;
+}
+
+
+
+@media screen and (max-width: 725px) {
+    .footer-section .footer-container .footer-links .footer-links-buttons {
+        border: none;
+        /* Switch to 2 items per row */
+        flex: 1 1 50%;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+}

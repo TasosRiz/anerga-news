@@ -1,0 +1,66 @@
+.profile-reports-section {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.profile-reports-section .reports-settings-header {
+    flex: 1;
+    text-align: left;
+    border-bottom: 1px solid gray;
+}
+
+.profile-reports-section .reports-settings-main {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-reports-section .reports-settings-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 130px;
+    gap: 18px;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #eef2f7;
+    text-align: left;
+}
+
+.profile-reports-section .reports-settings-row:last-child {
+    border-bottom: none;
+}
+
+.profile-reports-section .reports-settings-row>.value-text {
+    text-align: right;
+}
+
+.settings-status {
+    width: fit-content;
+    justify-self: end;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.settings-status.active {
+    background: #d1fae5;
+    color: #047857;
+}
+
+@media (max-width: 768px) {
+    .profile-reports-section {
+        flex-direction: column;
+    }
+
+    .profile-reports-section .reports-settings-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .profile-reports-section .reports-settings-row>.value-text,
+    .settings-status {
+        justify-self: start;
+        text-align: left;
+    }
+}

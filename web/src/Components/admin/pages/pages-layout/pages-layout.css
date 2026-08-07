@@ -1,0 +1,13 @@
+.page-layout {
+    /* width: 100%; */
+    padding: 10px;
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+
+/* Body */
+.page-layout-content {
+    width: 100%;
+}

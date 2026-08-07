@@ -1,0 +1,138 @@
+/* Container */
+.container.swiper {
+  width: 100%;
+  padding: 60px 0;
+}
+
+/* Κέντρο κάθε slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Κάρτα */
+.card-item {
+  width: 380px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  border: 2px solid transparent;
+  transition: 0.25s ease;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-item:hover {
+  border-color: #5372F0;
+}
+
+/* Εικόνα */
+.card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Badge */
+.badge {
+  color: #5372F0;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 16px 0 12px;
+  background: #DDE4FF;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+/* Γενικές κατηγορίες (χρησιμοποίησέ τες στο Service Management) */
+.badge.primary {
+  color: #2563eb;
+  background: #dbeafe;
+}
+
+.badge.success {
+  color: #16a34a;
+  background: #dcfce7;
+}
+
+.badge.warning {
+  color: #d97706;
+  background: #fef3c7;
+}
+
+.badge.danger {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+/* Αν θέλεις να κρατήσεις One Piece χρώματα */
+.badge.luffy { background: #7f1d1d; color: red; }
+.badge.zoro { background: #064e3b; color: lime; }
+.badge.jinbe { background: #1e3a8a; color: cyan; }
+.badge.sanji { background: #78350f; color: gold; }
+
+/* Τίτλος */
+.card-title {
+  font-size: 1.1rem;
+  color: #111;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Κουμπί */
+.card-button {
+  height: 45px;
+  width: 60px;
+  border-radius: 50%;
+  margin-top: auto;
+  cursor: pointer;
+  border: 2px solid #5372F0;
+  background: transparent;
+  transform: rotate(-45deg);
+  transition: 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-item:hover .card-button {
+  background: #5372F0;
+}
+
+.card-button img {
+  width: 80%;
+  height: auto;
+}
+
+/* Swiper Navigation */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #5372F0;
+}
+
+/* Pagination */
+.swiper-pagination-bullet {
+  background: #5372F0;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .card-item {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-item {
+    width: 90%;
+  }
+}

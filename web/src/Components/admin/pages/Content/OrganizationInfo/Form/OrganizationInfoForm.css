@@ -1,0 +1,25 @@
+.organization-info-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.organization-info-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.organization-info-form .organization-info-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .organization-info-form {
+        grid-template-columns: 1fr;
+    }
+
+
+}

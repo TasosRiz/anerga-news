@@ -1,0 +1,141 @@
+.view-notification {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Main details card */
+
+.view-notification-card {
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #f8fafc;
+}
+
+/* Detail row */
+
+.notification-detail-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.notification-detail-row:first-child {
+    padding-top: 0;
+}
+
+.notification-detail-row:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.notification-detail-row span,
+.notification-detail-body>span {
+    color: #64748b;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.notification-detail-row strong,
+.notification-detail-row time {
+    color: #0f172a;
+    font-size: 0.94rem;
+    font-weight: 900;
+    line-height: 1.4;
+}
+
+/* Message */
+
+.notification-detail-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+.notification-detail-body p {
+    margin: 0;
+    color: #334155;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* Notification type */
+
+.notification-detail-row .notification-type {
+    width: fit-content;
+    min-width: 72px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.notification-detail-row .notification-type.info {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.notification-detail-row .notification-type.warning {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.notification-detail-row .notification-type.success {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.notification-detail-row .notification-type.urgent {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Status */
+
+.notification-status-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 82px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.78rem !important;
+    font-weight: 900;
+}
+
+.notification-status-pill.active {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.notification-status-pill.inactive {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Empty state */
+
+.view-notification-empty {
+    padding: 24px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 14px;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    background: #f8fafc;
+}

@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Notifications List
+   ========================================================================== */
+
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ==========================================================================
+   Notification Card
+   ========================================================================== */
+
+.notification-card {
+    width: 100%;
+    padding: 18px;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+.notification-card:hover {
+    background: #f8fafc;
+}
+
+.notification-card.unread {
+    background: #f5f8ff;
+    border-left: 4px solid #2563eb;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.notification-content {
+    width: 100%;
+}
+
+.notification-content h3 {
+    margin: 0 0 6px;
+
+    color: #111827;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.notification-content p {
+    margin: 0;
+
+    color: #6b7280;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Meta
+   ========================================================================== */
+
+.notification-meta {
+    margin-top: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* ==========================================================================
+   Type Badge
+   ========================================================================== */
+
+.notification-type {
+    padding: 4px 10px;
+
+    border-radius: 999px;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+
+    text-transform: capitalize;
+}
+
+.notification-type.info {
+    background: #e8f1ff;
+    color: #2563eb;
+}
+
+.notification-type.success {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.notification-type.warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.notification-type.urgent {
+    background: #f8d7da;
+    color: #842029;
+}
+
+/* ==========================================================================
+   Date
+   ========================================================================== */
+
+.notification-date {
+    color: #9ca3af;
+
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   Compact Mode
+   Χρησιμοποιείται στο Notification Bell dropdown.
+   ========================================================================== */
+
+
+.notifications-list.compact {
+    gap: 0;
+}
+
+.notifications-list.compact .notification-card {
+    padding: 14px 16px;
+
+    border-radius: 0;
+
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.notifications-list.compact .notification-card:first-child {
+    border-top: 0;
+}
+
+.notifications-list.compact .notification-card:last-child {
+    border-bottom: 0;
+}
+
+.notifications-list.compact .notification-card.unread {
+    background: #f5f8ff;
+    border-left: 4px solid #2563eb;
+}
+
+.notifications-list.compact .notification-content h3 {
+    margin-bottom: 4px;
+
+    font-size: 0.9rem;
+}
+
+.notifications-list.compact .notification-content p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.notifications-list.compact .notification-meta {
+    margin-top: 10px;
+}
+
+.notifications-list.compact .notification-type {
+    padding: 3px 8px;
+
+    font-size: 0.68rem;
+}
+
+.notifications-list.compact .notification-date {
+    font-size: 0.68rem;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 600px) {
+    .notification-card {
+        padding: 14px;
+    }
+
+    .notification-meta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .notification-date {
+        white-space: normal;
+    }
+
+    .notifications-list.compact .notification-meta {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,82 @@
+/*
+|--------------------------------------------------------------------------
+| Media Upload Bar
+|--------------------------------------------------------------------------
+| Upload controls for the Media Library.
+|--------------------------------------------------------------------------
+*/
+
+.media-upload-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+
+    width: 100%;
+    padding: 16px;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.media-upload-bar .media-file-picker {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.media-upload-bar .media-input {
+    display: none;
+}
+
+.media-upload-bar .media-selected-file {
+    min-width: 0;
+    max-width: 260px;
+
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.media-upload-bar .media-upload-btn {
+    flex-shrink: 0;
+    width: auto;
+    height: 42px;
+    padding: 0 18px;
+}
+
+/* disabled upload button */
+.media-upload-bar .media-upload-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .media-upload-bar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .media-upload-bar .media-file-picker {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .media-upload-bar .media-selected-file {
+        max-width: 100%;
+    }
+
+    .media-upload-bar .media-upload-btn {
+        width: 100%;
+    }
+}

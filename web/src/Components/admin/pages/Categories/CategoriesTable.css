@@ -1,0 +1,167 @@
+/* Categories Show */
+.categories-container {
+    width: 100%;
+    min-width: 0;
+}
+
+.categories-container .categories-page-layout {
+    margin-top: 10px;
+}
+
+/* Table wrapper */
+.categories-container .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+
+
+/* Table */
+.categories-container .data-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+/* Cells */
+.categories-container .data-table th,
+.categories-container .data-table td {
+    padding: 16px 18px;
+    text-align: left;
+    vertical-align: middle;
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Header */
+.categories-container .data-table th {
+    background: var(--table-header-color, #526d82);
+    color: var(--table-header-text-color, #ffffff);
+    font-size: 0.92rem;
+    font-weight: 800;
+}
+
+/* Body */
+.categories-container .data-table td {
+    color: #0f172a;
+    font-size: 0.95rem;
+}
+
+.categories-container .data-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.categories-container .data-table tbody tr:hover {
+    background: #eef4fb;
+}
+
+.categories-container .data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Name column */
+.categories-container .data-table td:nth-child(2) {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* Status badge */
+.categories-container .status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 74px;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.categories-container .status-active,
+.categories-container .btn-active {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.categories-container .status-blocked {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Actions */
+.categories-container .action-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.categories-container .action-link {
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* No state */
+.categories-container .no-state,
+.categories-container .empty-state {
+    text-align: center;
+    padding: 24px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .categories-container .categories-page-layout {
+        border-radius: 16px;
+    }
+
+    .categories-container .data-table {
+        min-width: 680px;
+    }
+
+    .categories-container .data-table th,
+    .categories-container .data-table td {
+        padding: 14px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+    .categories-container .categories-page-layout {
+        padding: 12px;
+    }
+
+    .categories-container .data-table {
+        min-width: 640px;
+    }
+
+    .categories-container .action-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .categories-container .action-link,
+    .categories-container .btn-action {
+        width: 100%;
+        min-width: 90px;
+        height: 36px;
+        font-size: 0.8rem;
+    }
+
+    .categories-container .status-badge {
+        min-width: 66px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+}

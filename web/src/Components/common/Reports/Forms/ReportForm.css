@@ -1,0 +1,356 @@
+/*
+|--------------------------------------------------------------------------
+| Report Form Card
+|--------------------------------------------------------------------------
+*/
+
+.report-card {
+    margin-top: 24px;
+    padding: 24px;
+
+    background: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Layout
+|--------------------------------------------------------------------------
+*/
+
+.report-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.report-main {
+    min-width: 0;
+}
+
+.report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Error
+|--------------------------------------------------------------------------
+*/
+
+.report-card .error-msg {
+    margin: 0;
+    padding: 12px 14px;
+
+    color: #b91c1c;
+    background: #fee2e2;
+
+    border-radius: 12px;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Form Fields
+|--------------------------------------------------------------------------
+*/
+
+.report-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.report-form label,
+.report-label {
+    color: #526d82;
+    font-size: 0.84rem;
+    font-weight: 800;
+}
+
+.report-form input,
+.report-form select,
+.report-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+
+    color: #10243d;
+    background: #f8fafc;
+
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 700;
+
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.report-form input:focus,
+.report-form select:focus,
+.report-form textarea:focus {
+    border-color: #0f3a5a;
+    box-shadow: 0 0 0 3px rgba(15, 58, 90, 0.08);
+}
+
+.report-form select:disabled,
+.report-form input:disabled,
+.report-form textarea:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.report-form .desc-input {
+    min-height: 135px;
+    resize: vertical;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Location Fields
+|--------------------------------------------------------------------------
+*/
+
+.location-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 120px;
+    gap: 14px;
+}
+
+.address-details-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Location Button
+|--------------------------------------------------------------------------
+*/
+
+.location-search-button {
+    width: 100%;
+    height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+
+    background: #eaf0f4;
+    color: #0f3a5a;
+
+    font-size: 0.9rem;
+    font-weight: 900;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.location-search-button:hover {
+    background: #dce7ee;
+    border-color: #0f3a5a;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Photo
+|--------------------------------------------------------------------------
+*/
+
+.selected-photo-name {
+    display: block;
+    margin-top: 8px;
+
+    color: #526d82;
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Actions
+|--------------------------------------------------------------------------
+*/
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.report-form .back-button,
+.report-form .btn.primary {
+    min-width: 130px;
+    height: 42px;
+    padding: 0 18px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 0.88rem;
+    font-weight: 900;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.report-form .back-button {
+    border: 1px solid #dbe4ee;
+    background: #ffffff;
+    color: #526d82;
+}
+
+.report-form .back-button:hover {
+    border-color: #0f3a5a;
+    color: #0f3a5a;
+}
+
+.report-form .btn.primary {
+    border: none;
+    background: #0f3a5a;
+    color: #ffffff;
+}
+
+.report-form .btn.primary:hover:not(:disabled) {
+    background: #10243d;
+}
+
+.report-form .btn.primary:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Map Section
+|--------------------------------------------------------------------------
+*/
+
+.report-side {
+    min-width: 0;
+    padding: 18px;
+
+    background: #f8fafc;
+    border: 1px solid #e5eaf0;
+    border-radius: 16px;
+}
+
+.report-map-card {
+    width: 100%;
+    margin-top: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #dbe4ee;
+    border-radius: 14px;
+}
+
+.report-map-card .leaflet-container {
+    width: 100%;
+    height: 320px;
+    z-index: 50;
+}
+
+/*
+|--------------------------------------------------------------------------
+| SidePanel Friendly
+|--------------------------------------------------------------------------
+*/
+
+.with-side-panel.has-panel .report-card {
+    margin-top: 0;
+    padding: 0;
+
+    border: none;
+    box-shadow: none;
+}
+
+.with-side-panel.has-panel .report-layout {
+    gap: 18px;
+}
+
+.with-side-panel.has-panel .location-container {
+    grid-template-columns: 1fr;
+}
+
+.with-side-panel.has-panel .report-map-card .leaflet-container {
+    height: 260px;
+}
+
+.with-side-panel.has-panel .form-actions {
+    justify-content: stretch;
+}
+
+.with-side-panel.has-panel .report-form .back-button,
+.with-side-panel.has-panel .report-form .btn.primary {
+    flex: 1;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Responsive
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 992px) {
+    .location-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .report-card {
+        margin-top: 16px;
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .report-layout {
+        gap: 18px;
+    }
+
+    .report-form {
+        gap: 16px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .report-form .back-button,
+    .report-form .btn.primary {
+        width: 100%;
+    }
+
+    .report-side {
+        padding: 12px;
+    }
+
+    .report-map-card .leaflet-container {
+        height: 260px;
+    }
+}

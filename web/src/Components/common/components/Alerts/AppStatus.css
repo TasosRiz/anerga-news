@@ -1,0 +1,33 @@
+.app-status {
+    margin: 14px 0;
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.app-status.center {
+    text-align: center;
+}
+
+.app-status-info {
+    background: #eaf0f4;
+    color: #526d82;
+}
+
+.app-status-success {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.app-status-error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.app-status-warning {
+    background: #fff7ed;
+    color: #c2410c;
+}

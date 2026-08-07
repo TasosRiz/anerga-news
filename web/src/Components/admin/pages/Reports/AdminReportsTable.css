@@ -1,0 +1,200 @@
+.admin-reports-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    border-radius: 10px;
+}
+
+.admin-reports-table-wrapper .admin-reports-table {
+    width: 100%;
+    min-width: 950px;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+
+
+/* Header */
+.admin-reports-table-wrapper .admin-reports-table thead tr {
+    background: var(--table-header-color);
+}
+
+.admin-reports-table-wrapper .admin-reports-table th {
+    padding: 10px 8px;
+    text-align: left;
+    color: var(--table-header-text-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-bottom: 1px solid #dbe3ea;
+    white-space: nowrap;
+}
+
+/* Cells */
+.admin-reports-table td {
+    padding: 10px 8px;
+    color: #334155;
+    font-size: 0.95rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Zebra rows */
+.admin-reports-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.admin-reports-table tbody tr:nth-child(even) {
+    background-color: #eaf0f4;
+}
+
+.admin-reports-table tbody tr:hover {
+    background-color: #d7e3eb;
+}
+
+/* ID */
+.report-table-id {
+    font-weight: 700;
+    color: #526d82;
+    white-space: nowrap;
+}
+
+/* Title */
+.report-table-title {
+    min-width: 110px;
+    max-width: 170px;
+    font-weight: 700;
+    color: #1e293b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Location */
+.report-table-location {
+    min-width: 170px;
+    max-width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Date */
+.report-table-date {
+    white-space: nowrap;
+}
+
+/* Actions - ποτέ ellipsis στα κουμπιά */
+.admin-reports-table th:last-child,
+.admin-reports-table td:last-child {
+    min-width: 155px;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.report-table-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 155px;
+    white-space: nowrap;
+}
+
+
+
+
+
+.admin-content,
+.admin-reports-container,
+.page-layout,
+.page-layout-content {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Mobile: Table -> Cards */
+@media (max-width: 768px) {
+
+
+    .admin-reports-table-wrapper .admin-reports-table {
+        width: 100%;
+        min-width: 0;
+        border-collapse: separate;
+        border-spacing: 0 14px;
+    }
+
+    /* header */
+    .admin-reports-table-wrapper .admin-reports-table thead {
+        display: none;
+    }
+
+    .admin-reports-table,
+    .admin-reports-table tbody,
+    .admin-reports-table tr,
+    .admin-reports-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .admin-reports-table tbody tr {
+        padding: 14px;
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+        margin-bottom: 10px;
+    }
+
+
+    .admin-reports-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 10px 0;
+        border-bottom: 1px solid #eef2f6;
+        font-size: 0.9rem;
+        white-space: normal;
+    }
+
+    .admin-reports-table td:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .admin-reports-table td::before {
+        content: attr(data-label);
+        flex: 0 0 95px;
+        color: #526d82;
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .report-table-id,
+    .report-table-title,
+    .report-table-location,
+    .report-table-date {
+        min-width: 0;
+        max-width: none;
+        width: auto;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+    }
+
+    .admin-reports-table th:last-child,
+    .admin-reports-table td:last-child {
+        min-width: 0;
+        white-space: normal;
+    }
+
+    .report-table-actions {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}

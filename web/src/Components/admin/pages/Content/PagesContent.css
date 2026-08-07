@@ -1,0 +1,12 @@
+/* Container */
+.page-container {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-container .content-page-layout {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}

@@ -1,0 +1,85 @@
+.reports-time-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+    width: 100%;
+}
+
+/* Header */
+.reports-time-card .reports-time-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.reports-time-card .reports-time-header h3 {
+    margin: 0 0 6px;
+    color: #0f172a;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.reports-time-card .reports-time-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+/* filter */
+.reports-time-card .reports-time-header .reports-time-filter {
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #0f172a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: default;
+}
+
+/* Chart */
+.reports-time-card .reports-time-chart {
+    width: 100%;
+    height: 280px;
+}
+
+.reports-time-card .reports-time-chart svg {
+    width: 100%;
+    height: 100%;
+}
+
+.reports-time-card .reports-time-chart .chart-grid-line {
+    stroke: #e2e8f0;
+    stroke-width: 1;
+}
+
+.reports-time-card .reports-time-chart .chart-area {
+    fill: rgba(37, 99, 235, 0.12);
+}
+
+.reports-time-card .reports-time-chart .chart-line {
+    fill: none;
+    stroke: #2563eb;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.reports-time-card .reports-time-chart .chart-label {
+    fill: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.reports-time-card .reports-time-chart .reports-time-empty {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 600;
+}

@@ -1,0 +1,205 @@
+.personal-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    width: 100%;
+}
+
+/* LEFT SIDE */
+.personal-container .personal-left-side {
+    min-width: 0;
+}
+
+/* Photo */
+.personal-container .personal-left-side .profile-photo-card {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+    text-align: center;
+}
+
+.personal-container .personal-left-side .profile-photo-card .profile-avatar {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #526d82;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.profile-photo-card h3 {
+    margin: 0 0 8px;
+    color: #1e293b;
+    font-size: 1.1rem;
+}
+
+.profile-photo-card p {
+    margin: 0 0 18px;
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* button */
+.photo-btn {
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: #eaf0f4;
+    color: #526d82;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.photo-btn:hover {
+    background: #dce7ee;
+}
+
+/* RIGHT SIDE */
+.personal-container .personal-right-side {
+    min-width: 0;
+}
+
+/* form */
+.personal-container .personal-right-side .personal-form {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+}
+
+/* title */
+.personal-container .personal-right-side .personal-form .form-section-title {
+    margin-bottom: 24px;
+}
+
+.personal-container .personal-right-side .personal-form .form-section-title h3 {
+    margin: 0 0 6px;
+    color: #1e293b;
+    font-size: 1.2rem;
+}
+
+.personal-container .personal-right-side .personal-form .form-section-title p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.92rem;
+}
+
+/* rows */
+.personal-container .personal-right-side .personal-form .account-row .account-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.personal-container .personal-right-side .personal-form .account-row .account-item label {
+    color: #334155;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* input */
+.personal-container .personal-right-side .personal-form input {
+    width: 100%;
+    height: 46px;
+    padding: 0 4px;
+    color: #1e293b;
+    background: #f8fafc;
+    border: 1px solid #dbe3ea;
+    border-radius: 10px;
+    outline: none;
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.account-item input::placeholder {
+    color: #94a3b8;
+}
+
+.account-item input:focus {
+    border-color: #526d82;
+    box-shadow: 0 0 0 3px rgba(82, 109, 130, 0.14);
+}
+
+/* Actions */
+.personal-container .personal-right-side .personal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.personal-container .personal-right-side .personal-actions .cancel-btn,
+.personal-container .personal-right-side .personal-actions .save-btn {
+    height: 44px;
+    padding: 0 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.personal-container .personal-right-side .personal-actions .cancel-btn {
+    color: #526d82;
+    background: #eaf0f4;
+    border: none;
+}
+
+.personal-container .personal-right-side .personal-actions .save-btn {
+    color: #ffffff;
+    background: #526d82;
+    border: none;
+}
+
+.personal-container .personal-right-side .personal-actions .cancel-btn:hover {
+    background: #dce7ee;
+}
+
+.personal-container .personal-right-side .personal-actions .save-btn:hover {
+    background: #405769;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .personal-container {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .personal-container {
+        gap: 16px;
+    }
+
+    .profile-photo-card,
+    .personal-form {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .account-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .personal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-btn,
+    .save-btn {
+        width: 100%;
+    }
+}
