@@ -2,15 +2,12 @@ import React from "react";
 import "./Audience.css";
 import { audienceItems } from "./audienceItems";
 
-//  Ενότητα παρουσίασης του κοινού στο οποίο απευθύνεται η εφαρμογή.
-
-//  Δημιουργεί δυναμικά τις κάρτες χρηστών από το array audienceItems,
-//  ώστε το περιεχόμενο να παραμένει οργανωμένο και εύκολα επεκτάσιμο.
+// Generic section for presenting the types of users
+// or use cases supported by the template.
 const Audience = () => {
-
     return (
         <section className="audience-container">
-            <h2>Το ServiceKit προσαρμόζεται στις ανάγκες σας</h2>
+            <h2>Ένα starter kit για διαφορετικές ανάγκες</h2>
 
             <div className="audience-box">
                 {audienceItems.map((item) => (

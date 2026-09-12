@@ -5,21 +5,36 @@ Thumbs.db
 .vscode/
 *.log
 
-# Laravel
-laravel/.env
-laravel/vendor/
-laravel/node_modules/
-laravel/storage/logs/*.log
-laravel/bootstrap/cache/*.php
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
 
-# React
-react/.env
-react/.env.local
-react/node_modules/
-react/dist/
-react/build/
+# Laravel backend
+backend/.env
+backend/.env.*
+!backend/.env.example
+backend/vendor/
+backend/node_modules/
+backend/public/build/
+backend/public/hot
+backend/public/storage/
+backend/storage/logs/*.log
+backend/bootstrap/cache/*.php
 
-# Flutter
+# React web
+web/.env
+web/.env.*
+!web/.env.example
+web/node_modules/
+web/dist/
+web/build/
+
+# Flutter mobile
 mobile/.env
 mobile/.dart_tool/
 mobile/build/
@@ -29,3 +44,12 @@ mobile/android/.gradle/
 mobile/android/local.properties
 mobile/ios/Pods/
 mobile/ios/.symlinks/
+
+# Local databases
+*.sqlite
+*.sqlite3
+
+# Test / coverage outputs
+coverage/
+.nyc_output/
+.phpunit.result.cache

@@ -1,54 +1,57 @@
-import { Link } from "react-router-dom";
 import {
-    BiMessageRoundedDetail,
+    BiRocket,
     BiCog,
     BiShow,
     BiGroup,
-    BiMobileAlt,
 } from "react-icons/bi";
 
 import "./AboutSection.css";
 
 const AboutSection = () => {
-    return (
-        <section className="about-section">
-            <div className="about-section-header">
-                <h2>Ο στόχος μας</h2>
+    return (<section className="about-section"> <div className="about-section-header"> <h2>Ο στόχος μας</h2>
+
+        <p>
+            Να προσφέρουμε μια απλή, οργανωμένη και ευέλικτη εμπειρία
+            που μπορεί να προσαρμοστεί στις ανάγκες κάθε project.
+        </p>
+    </div>
+
+        <div className="about-values-grid">
+            <div className="about-value-card">
+                <BiRocket />
+                <h3>Απλότητα</h3>
                 <p>
-                    Να κάνουμε την αίτημα προβλημάτων πιο απλή για τον πολίτη
-                    και πιο οργανωμένη για τις αρμόδιες υπηρεσίες.
+                    Καθαρή εμπειρία χρήσης και γρήγορη πρόσβαση στις βασικές λειτουργίες.
                 </p>
             </div>
 
-            <div className="about-values-grid">
-                <div className="about-value-card">
-                    <BiMessageRoundedDetail />
-                    <h3>Άμεση αίτημα</h3>
-                    <p>Ο πολίτης μπορεί να δηλώσει γρήγορα ένα πρόβλημα που εντοπίζει.</p>
-                </div>
-
-                <div className="about-value-card">
-                    <BiCog />
-                    <h3>Οργάνωση</h3>
-                    <p>Οι αιτήματα συγκεντρώνονται και διαχειρίζονται από τον οργανισμό.</p>
-                </div>
-
-                <div className="about-value-card">
-                    <BiShow />
-                    <h3>Διαφάνεια</h3>
-                    <p>Η πορεία κάθε αιτήματος μπορεί να παρακολουθείται από τον χρήστη.</p>
-                </div>
-
-                <div className="about-value-card">
-                    <BiGroup />
-                    <h3>Συνεργασία</h3>
-                    <p>Πολίτες και υπηρεσίες συνεργάζονται για καλύτερη καθημερινότητα.</p>
-                </div>
+            <div className="about-value-card">
+                <BiCog />
+                <h3>Ευελιξία</h3>
+                <p>
+                    Η εφαρμογή μπορεί να προσαρμοστεί εύκολα σε διαφορετικά προϊόντα και workflows.
+                </p>
             </div>
-        </section>
 
+            <div className="about-value-card">
+                <BiShow />
+                <h3>Σαφήνεια</h3>
+                <p>
+                    Οι πληροφορίες και οι ενέργειες παραμένουν οργανωμένες και εύκολα κατανοητές.
+                </p>
+            </div>
 
+            <div className="about-value-card">
+                <BiGroup />
+                <h3>Συνεργασία</h3>
+                <p>
+                    Υποστηρίζει ανθρώπους, ομάδες και οργανισμούς που χρειάζονται μια κοινή ψηφιακή βάση.
+                </p>
+            </div>
+        </div>
+    </section>
     );
+
 };
 
 export default AboutSection;

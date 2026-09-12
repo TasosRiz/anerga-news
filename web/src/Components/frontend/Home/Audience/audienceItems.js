@@ -1,21 +1,26 @@
-import citizensImg from './assets/users.png';
-import servicesImg from './assets/services.png';
-import cityImg from './assets/city.png';
-
 export const audienceItems = [
     {
-        title: 'Για τους πολίτες',
-        text: 'Εύκολη υποβολή αιτημάτων, επιλογή τοποθεσίας στον χάρτη και παρακολούθηση της εξέλιξης κάθε αιτήματος με απλό και οργανωμένο τρόπο.',
-        image: citizensImg,
+        id: 1,
+        title: "SaaS Applications",
+        text: "Ξεκίνα γρήγορα ένα SaaS project με authentication, dashboard, users και API.",
+        image: "/images/saas.jpg",
     },
     {
-        title: 'Για τις υπηρεσίες',
-        text: 'Καλύτερη οργάνωση, διαχείριση και ενημέρωση των αιτημάτων μέσα από ένα ενιαίο και σύγχρονο περιβάλλον διαχείρισης.',
-        image: servicesImg,
+        id: 2,
+        title: "Booking Platforms",
+        text: "Χρησιμοποίησε το starter ως βάση για κρατήσεις, υπηρεσίες και διαχείριση πελατών.",
+        image: "/images/booking.jpg",
     },
     {
-        title: 'Για την πόλη',
-        text: 'Ενίσχυση της επικοινωνίας, ταχύτερη απόκριση στα προβλήματα και βελτίωση της καθημερινότητας μέσα από ψηφιακή συμμετοχή.',
-        image: cityImg,
+        id: 3,
+        title: "Client Portals",
+        text: "Δημιούργησε portals για πελάτες, αρχεία, αιτήματα και ενημερώσεις.",
+        image: "/images/client-portal.jpg",
+    },
+    {
+        id: 4,
+        title: "Custom Business Apps",
+        text: "Προσάρμοσε το core architecture σε CRM, directories, internal tools ή άλλα custom apps.",
+        image: "/images/business-app.jpg",
     },
 ];

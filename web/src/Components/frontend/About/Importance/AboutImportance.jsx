@@ -3,23 +3,21 @@ import { Link } from "react-router-dom";
 import "./AboutImportance.css";
 
 const AboutImportance = () => {
-    return (
-        <section className="about-importance">
-            <div>
-                <h2>Γιατί έχει σημασία</h2>
-                <p>
-                    Κάθε αίτημα μετράει. Μέσα από τη συμμετοχή των χρηστών,
-                    η πόλη μπορεί να γίνει πιο λειτουργική, καθαρή και ασφαλής.
-                </p>
-            </div>
+    return (<section className="about-importance"> <div> <h2>Γιατί έχει σημασία</h2>
 
-            <Link to="/profile/reports/create" className="btn-action btn-save">
-                Ξεκίνα μία αίτημα
-            </Link>
-        </section>
+        <p>
+            Μια καλή ψηφιακή εμπειρία βοηθά τους χρήστες να βρίσκουν
+            πιο εύκολα αυτό που χρειάζονται και να ολοκληρώνουν
+            τις ενέργειές τους γρήγορα και απλά.
+        </p>
+    </div>
 
-
+        <Link to="/register" className="btn-action btn-save">
+            Ξεκίνα τώρα
+        </Link>
+    </section>
     );
+
 };
 
 export default AboutImportance;

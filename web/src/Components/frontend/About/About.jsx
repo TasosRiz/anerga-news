@@ -16,7 +16,6 @@ import "./About.css";
 import AboutHero from "./Hero/AboutHero";
 import AboutSection from "./Hero/AboutSection/AboutSection";
 import AboutImportance from "./Importance/AboutImportance";
-import AboutMobile from "./Mobile/AboutMobile";
 import { useOrganizationInfo } from "../../common/OrganizationInfo/Context/OrganizationInfoContext";
 
 const About = () => {
@@ -29,7 +28,6 @@ const About = () => {
         <main className="about-page">
             <AboutHero appName={appName} />
             <AboutSection />
-            <AboutMobile appName={appName} />
             <AboutImportance />
         </main>
     );
