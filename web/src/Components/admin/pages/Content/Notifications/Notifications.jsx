@@ -14,13 +14,6 @@ import NotificationsTable from "./Table/NotificationsTable";
 import ViewNotification from "./Actions/View/ViewNotification";
 import NotificationForm from "../../../../common/Notifications/Forms/NotificationForm";
 
-// API
-import {
-    fetchNotifications,
-    createNotification,
-    updateNotification,
-    deleteNotification,
-} from "../../../../common/Notifications/api/notificationsApi";
 
 // Token
 import { useAuth } from "../../../../common/Auth/provider/AuthProvider";
