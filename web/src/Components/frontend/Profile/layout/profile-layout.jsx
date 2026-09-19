@@ -9,8 +9,8 @@ import { Routes, Route, useOutletContext } from "react-router-dom";
 import UserSidebar from "../Sidebar/Sidebar";
 import "./profile-layout.css";
 
-// Reports
-import Reports from "../Reports/page/ReportsPage";
+// Reports--
+import Reports from "../Reports/Page/ReportsPage";
 // import CreateReport from "../Reports/CreateReport";
 // import ReportDetails from "../Reports/ViewReport";
 // import EditReport from "../Reports/EditReport";
