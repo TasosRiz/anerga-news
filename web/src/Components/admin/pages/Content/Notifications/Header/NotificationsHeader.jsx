@@ -1,4 +1,4 @@
-import './notificationsHeader.css'
+import './NotificationsHeader.css'
 
 //  Επικεφαλίδα της σελίδας διαχείρισης ειδοποιήσεων.
 

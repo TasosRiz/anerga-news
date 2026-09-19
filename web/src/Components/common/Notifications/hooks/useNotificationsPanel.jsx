@@ -6,7 +6,7 @@ import {
     createNotification,
     updateNotification,
     deleteNotification,
-} from "../api/notificationsApi";
+} from "../api/NotificationsApi";
 
 
 // Διαχειρίζεται όλη τη λογική του admin Notifications panel.

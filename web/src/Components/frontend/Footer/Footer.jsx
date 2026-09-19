@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './footer.css';
+import './Footer.css';
 import fb from './FooterAssets/fb.svg';
 import twitter from './FooterAssets/twitter.svg';
 import linkedin from './FooterAssets/linkedin.svg';
