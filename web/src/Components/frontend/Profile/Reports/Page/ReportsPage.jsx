@@ -186,8 +186,8 @@ function ReportsPage() {
   return (
     <div
       className={`with-side-panel ${panelIsOpen
-          ? "has-panel"
-          : ""
+        ? "has-panel"
+        : ""
         }`}
       style={{
         "--side-panel-width": "620px",
@@ -195,8 +195,8 @@ function ReportsPage() {
     >
       <div className="user-reports-container">
         <DashHeader
-          title="Οι Αιτήματα μου"
-          showSearch
+          title="Τα γεγονότα μου"
+          showSearch={false}
           searchPlaceholder="Αναζήτηση αιτήματος..."
           searchValue={searchValue}
           onSearchChange={setSearchValue}

@@ -15,7 +15,6 @@ import { OrganizationInfoProvider } from "./Components/common/OrganizationInfo/C
 import AdminLogin from "./Components/admin/Auth/AdminAuth";
 
 // Frontend
-import FrontendHome from "./Components/frontend/Home/Home";
 import FrontendLayout from "./Components/frontend/FrontendLayout";
 import About from "./Components/frontend/About/About";
 import ProfilePage from "./Components/frontend/Profile/layout/profile-layout";
@@ -72,12 +71,13 @@ function App() {
             />
           }
         >
-          <Route path="/" element={<FrontendHome />} />
+          {/* Home-Posts */}
+          <Route path="/" element={<PostsPage />} />
+          <Route path="/events/:id" element={<PostsViewPage />} />
+
           <Route path="/about" element={<About />} />
 
           {/* Posts */}
-          <Route path="/posts" element={<PostsPage />} />
-          <Route path="/posts/:id" element={<PostsViewPage />} />
 
           {/* User login */}
           {/* Αν ο χρήστης είναι ήδη συνδεδεμένος,

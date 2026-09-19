@@ -35,7 +35,7 @@ function Navbar({
     // Προαιρετικό περιεχόμενο που εμφανίζεται
     // στη δεξιά πλευρά του navbar πριν από το logout/login.
     // Χρησιμοποιείται π.χ. για το notification bell.
-    rightContent = null,
+    leftContent = null,
 }) {
     // Παίρνει τον χρήστη και τη λειτουργία logout
     // απευθείας από τον κεντρικό AuthProvider.
@@ -104,9 +104,9 @@ function Navbar({
                 </Link>
 
                 {/* Notif Bell */}
-                {rightContent && (
+                {leftContent && (
                     <div className="navbar-right-content">
-                        {rightContent}
+                        {leftContent}
                     </div>
                 )}
 

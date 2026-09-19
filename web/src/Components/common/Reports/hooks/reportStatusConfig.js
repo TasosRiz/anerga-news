@@ -28,8 +28,8 @@ export const reportStatusConfig = {
 // Πραγματικές καταστάσεις αιτήματος.
 // Χρησιμοποιούνται σε φόρμες και select fields.
 export const reportStatusOptions = [
-    { label: "Όλες", status: "" },
-    { label: "Νέες", status: "new" },
+    { label: "Όλα", status: "" },
+    { label: "Νέα", status: "new" },
     { label: "Σε εξέλιξη", status: "in_progress" },
-    { label: "Ολοκληρωμένες", status: "solved" },
+    { label: "Κοινωποιημένα", status: "solved" },
 ];

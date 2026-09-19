@@ -1,0 +1,103 @@
+.post-slider-section {
+    width: 100%;
+}
+
+.post-slider-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.post-slider-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #f59e0b;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.post-slider-header h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.post-slider-card {
+    min-width: 280px;
+    max-width: 280px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.post-slider-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 14px 14px 10px;
+}
+
+.post-slider-date {
+    color: #94a3b8;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.post-slider-content {
+    padding: 14px;
+}
+
+.post-slider-content h3 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 1.05rem;
+    line-height: 1.35;
+
+    font-weight: 800;
+}
+
+.post-slider-content p {
+    margin: 10px 0 0;
+
+    color: #64748b;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.post-slider-link {
+    display: inline-block;
+
+    margin-top: 14px;
+
+    color: #2563eb;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.post-slider-link:hover {
+    text-decoration: underline;
+}

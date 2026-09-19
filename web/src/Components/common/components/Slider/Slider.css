@@ -1,0 +1,136 @@
+.slider {
+    position: relative;
+}
+
+/* =========================
+   TRACK
+========================= */
+
+.slider-track {
+    display: flex;
+    gap: 24px;
+
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.slider-track::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================
+   HORIZONTAL
+========================= */
+
+.slider-track-horizontal {
+    flex-direction: row;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+
+    padding: 8px 4px 18px;
+}
+
+.slider-track-horizontal>* {
+    flex: 0 0 340px;
+    scroll-snap-align: start;
+}
+
+
+/* =========================
+   VERTICAL
+========================= */
+
+.slider-track-vertical {
+    flex-direction: column;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scroll-snap-type: y mandatory;
+
+    max-height: 600px;
+
+    padding: 4px 18px 4px 4px;
+}
+
+.slider-track-vertical>* {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+.slider-arrow {
+    position: absolute;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #0f172a;
+
+    font-size: 2rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+}
+
+
+/* Horizontal arrows */
+
+.slider-horizontal .slider-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-horizontal .slider-arrow-previous {
+    left: -18px;
+}
+
+.slider-horizontal .slider-arrow-next {
+    right: -18px;
+}
+
+
+/* Vertical arrows */
+
+.slider-vertical .slider-arrow {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-vertical .slider-arrow-previous {
+    top: -18px;
+}
+
+.slider-vertical .slider-arrow-next {
+    bottom: -18px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+    .slider-track-horizontal>* {
+        flex-basis: 85%;
+    }
+}

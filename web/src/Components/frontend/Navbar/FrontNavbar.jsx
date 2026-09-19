@@ -25,11 +25,9 @@ function FrontNavbar({
 
     // Εμφανίζεται μόνο σε συνδεδεμένους χρήστες.
     ...(isAuthenticated
-      ? [{ label: "Αιτήματα", to: "/profile/dashboard" }]
+      ? [{ label: "Γεγονότα", to: "/profile/dashboard" }]
       : []),
 
-    { label: "Σχετικά", to: "/about" },
-    { label: "Ανακοινώσεις", to: "/posts" },
 
     // Εμφανίζεται μόνο σε χρήστες με ρόλο admin.
     ...(isAdmin
@@ -49,7 +47,7 @@ function FrontNavbar({
       onToggleMenu={onToggleMenu}
       onCloseMenus={onCloseMenus}
 
-      rightContent={
+      leftContent={
         isAuthenticated ? (
           <NotificationBell token={token} />
         ) : null

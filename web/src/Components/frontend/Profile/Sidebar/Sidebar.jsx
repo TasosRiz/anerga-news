@@ -18,13 +18,13 @@ import SidebarMenu from "../../../common/Sidebar/SidebarMenu";
 const userSidebarItems = [
   {
     id: "dashboard",
-    label: "Πίνακας Ελέγχου",
+    label: "Γενικά",
     path: "/profile/dashboard",
     icon: <BiHome />,
   },
   {
     id: "reports",
-    label: "Οι Αιτήματα μου",
+    label: "Τα γεγονότα μου",
     path: "/profile/reports",
     icon: <BiSolidReport />,
   },

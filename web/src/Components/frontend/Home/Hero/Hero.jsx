@@ -3,108 +3,102 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
     return (
-        <section className="hero-section">
+        <section className="hero-section box">
             <div className="hero-container">
 
-                {/* Left */}
-                <div className="hero-left">
+                {/* LEFT */}
+                <div className="hero-intro">
 
-                    <span className="hero-badge">
-                        Full-Stack SaaS Starter
+                    <span className="hero-eyebrow">
+                        Η ελληνική creator σκηνή, σε ένα μέρος
                     </span>
 
-                    <h1>
-                        Ξεκίνα το επόμενο <br />
-                        <span>project σου γρηγορότερα</span>
-                    </h1>
+                    <h1>Τι παίζει σήμερα;</h1>
 
                     <p>
-                        Ένα έτοιμο foundation για σύγχρονες web εφαρμογές,
-                        με authentication, dashboard, API, users και reusable
-                        components.
+                        Νέα, videos, συζητήσεις και ό,τι κινεί
+                        την ελληνική creator κοινότητα.
                     </p>
 
-                    <div className="hero-buttons">
-                        <Link
-                            to="/register"
-                            className="btn-action btn-md btn-create"
-                        >
-                            Ξεκίνα τώρα
-                        </Link>
+                    <div className="hero-stats">
 
-                        <a
-                            href="#features"
-                            className="btn-action btn-back"
-                        >
-                            Δες τα features
-                        </a>
-                    </div>
+                        <div className="hero-stat-card">
+                            <span className="hero-stat-icon">🔥</span>
 
-                    <div className="hero-info">
-                        <div className="hero-info-item">
-                            <strong>Laravel</strong>
-                            <span>Backend API</span>
-                        </div>
-
-                        <div className="hero-info-item">
-                            <strong>React</strong>
-                            <span>Web App</span>
-                        </div>
-
-                        <div className="hero-info-item">
-                            <strong>Flutter</strong>
-                            <span>Mobile App</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                {/* Right */}
-                <div className="hero-right">
-                    <div className="hero-visual">
-
-                        <div className="hero-phone">
-                            <div className="hero-phone-map">
-
-                                <span className="hero-map-pin">
-                                    ⚡
-                                </span>
-
-                                <div className="hero-report-card">
-
-                                    <span className="hero-report-label">
-                                        Your Application
-                                    </span>
-
-                                    <div className="hero-report-line large"></div>
-                                    <div className="hero-report-line"></div>
-
-                                    <div className="hero-report-bottom">
-                                        <div className="hero-report-image"></div>
-
-                                        <button type="button">
-                                            Get Started
-                                        </button>
-                                    </div>
-
-                                </div>
+                            <div>
+                                <strong>124</strong>
+                                <span>Trending</span>
                             </div>
                         </div>
 
-                        <div className="hero-floating hero-floating-camera">
-                            ⚙️
+                        <div className="hero-stat-card">
+                            <span className="hero-stat-icon">👥</span>
+
+                            <div>
+                                <strong>3.2K</strong>
+                                <span>Μέλη</span>
+                            </div>
                         </div>
 
-                        <div className="hero-floating hero-floating-check">
-                            ✓
-                        </div>
+                        <div className="hero-stat-card">
+                            <span className="hero-stat-icon">💬</span>
 
-                        <div className="hero-floating hero-floating-location">
-                            🚀
+                            <div>
+                                <strong>856</strong>
+                                <span>Συζητήσεις</span>
+                            </div>
                         </div>
 
                     </div>
                 </div>
+
+                {/* RIGHT */}
+                <article className="hero-featured">
+
+                    <img
+                        src="/images/hackypixelz.jpg"
+                        alt="HackyPixelz"
+                        className="hero-image"
+                    />
+
+                    <div className="hero-overlay" />
+
+                    <div className="hero-featured-content">
+
+                        <span className="hero-badge">
+                            ΚΥΡΙΟ ΘΕΜΑ
+                        </span>
+
+                        <h2>
+                            HackyPixelz: Νέο βίντεο –
+                            «Η Ανεργία Συνεχίζεται»
+                        </h2>
+
+                        <p>
+                            Ο HackyPixelz επιστρέφει με νέο βίντεο και
+                            η κοινότητα ήδη συζητάει τα highlights.
+                        </p>
+
+                        <div className="hero-featured-bottom">
+
+                            <div className="hero-meta">
+                                <span>Πριν 2 ώρες</span>
+                                <span>12.4K προβολές</span>
+                                <span>287 σχόλια</span>
+                            </div>
+
+                            <Link
+                                to="/post/hackypixelz"
+                                className="hero-button"
+                            >
+                                Δες περισσότερα
+                                <span aria-hidden="true">→</span>
+                            </Link>
+
+                        </div>
+
+                    </div>
+                </article>
 
             </div>
         </section>

@@ -1,22 +1,17 @@
-import { Link } from "react-router-dom";
 import "./PostsHeader.css";
 
-
-
 const PostsHeader = () => {
-
     return (
         <section className="front-posts-header">
-            <span className="front-posts-title">ServiceKit</span>
-            <h1>Νέα και ενημερώσεις</h1>
+            <span className="front-posts-title">Για σένα</span>
+
+            <h1>Τι παίζει στην κοινότητα</h1>
+
             <p>
-                Δείτε τις τελευταίες δημοσιεύσεις, δράσεις και ενημερώσεις
-                που αφορούν την πόλη και τις δημοτικές υπηρεσίες.
+                Videos, clips, memes, ανακοινώσεις και συζητήσεις
+                από την ελληνική creator σκηνή.
             </p>
-
         </section>
-
-
     );
 };
 

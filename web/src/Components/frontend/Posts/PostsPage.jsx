@@ -11,8 +11,9 @@ import PostsContent from "./Content/PostsContent";
 
 // Components
 import SelectFilter from "../../common/components/Filters/SelectFilter";
-import AppAlert from "../../common/components/Alerts/AppStatus";
 import AppStatus from "../../common/components/Alerts/AppStatus";
+import Hero from "../Home/Hero/Hero";
+import PostSlider from "./Content/PostSlider";
 
 
 //  Δημόσια σελίδα προβολής ανακοινώσεων.
@@ -104,6 +105,13 @@ const PostsPage = () => {
 
     return (
         <main className="front-posts-page">
+            <Hero />
+            <PostSlider
+                posts={posts}
+                title="Trending Εβδομάδας"
+            />
+
+
             {/* Header */}
             <PostsHeader />
 
@@ -143,6 +151,8 @@ const PostsPage = () => {
             {!loading && !error && filteredPosts.length > 0 && (
                 <PostsContent posts={filteredPosts} />
             )}
+
+
 
         </main>
     );
