@@ -10,7 +10,7 @@ import UserSidebar from "../Sidebar/Sidebar";
 import "./profile-layout.css";
 
 // Reports
-import Reports from "../Reports/Page/ReportsPage";
+import Reports from "../Reports/page/ReportsPage";
 // import CreateReport from "../Reports/CreateReport";
 // import ReportDetails from "../Reports/ViewReport";
 // import EditReport from "../Reports/EditReport";
